@@ -21,12 +21,18 @@
   "devDependencies": {
     "@roots/bud": "6.15.2",
     "@roots/bud-sass": "^6.15.2",
-    "@roots/sage": "6.15.2"
+    "@roots/sage": "6.15.2",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.1",
+    "caniuse-lite": "^1.0.30001525",
     "fontawesome": "^5.6.3",
-    "swiper": "3.3.1"
+    "ionicons": "^7.1.2",
+    "superfish": "^1.7.10",
+    "swiper": "3.3.1",
+    "watch": "^1.0.2"
   }
 }
