@@ -1,16 +1,14 @@
+@php
+$logo = get_field('logo','options');
+@endphp
 <header class="site-header" itemscope="" itemtype="https://schema.org/WPHeader">
     <div class="wrap">
         <div class="title-area">
-            <a href="https://demo.studiopress.com/monochrome/" class="custom-logo-link" rel="home"
+            <a href="/" class="custom-logo-link" rel="home"
                aria-current="page">
-                <img width="120" height="120"
-                                        src="https://demo.studiopress.com/monochrome/files/2017/03/logo.png"
-                                        class="custom-logo" alt="Monochrome" decoding="async"
-                                        srcset="https://demo.studiopress.com/monochrome/files/2017/03/logo.png 120w, https://demo.studiopress.com/monochrome/files/2017/03/logo-80x80.png 80w"
-                                        sizes="(max-width: 120px) 100vw, 120px">
+                <img width="500" src="{!! $logo !!}">
             </a>
-            <p class="site-title" itemprop="headline">Monochrome</p>
-            <p class="site-description" itemprop="description">A Professional Minimalist Theme</p></div>
+        </div>
         <nav class="nav-primary cofoss-responsive-menu" aria-label="Main" itemscope="" itemtype="https://schema.org/SiteNavigationElement" id="cofoss-nav-primary">
             <div class="wrap">
                 {!! wp_nav_menu([

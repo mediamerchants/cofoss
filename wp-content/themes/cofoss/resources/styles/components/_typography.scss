@@ -111,14 +111,17 @@ blockquote::before {
 /* Headings
 --------------------------------------------- */
 
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-weight: 700;
+  color: #fff;
   line-height: 1.2;
   margin: 0 0 10px;
 }
@@ -170,4 +173,15 @@ h5 {
 
 h6 {
   font-size: 16px;
+}
+
+.sea-blue {
+  color:#439ccc
+}
+.green
+{
+  color:#44b063;
+}
+.night{
+  color:#0d556d;
 }
