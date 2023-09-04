@@ -22,8 +22,9 @@ $section_1_content_text = get_field('section_1_content_text');
                 {!! $section_1_content_text !!}
             </div>
         </div>
+        <div class="col-12 section secion-1">
 
-
+        </div>
     </div>
 </div>
 
