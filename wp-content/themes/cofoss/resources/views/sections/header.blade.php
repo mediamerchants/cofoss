@@ -4,9 +4,9 @@ $logo = get_field('logo','options');
 <header class="site-header" itemscope="" itemtype="https://schema.org/WPHeader">
     <div class="wrap">
         <div class="title-area">
-            <a href="/" class="custom-logo-link" rel="home"
+            <a href="/" class="logo-link" rel="home"
                aria-current="page">
-                <img width="500" src="{!! $logo !!}">
+                <img class="logo" src="{!! $logo !!}">
             </a>
         </div>
         <nav class="nav-primary cofoss-responsive-menu" aria-label="Main" itemscope="" itemtype="https://schema.org/SiteNavigationElement" id="cofoss-nav-primary">

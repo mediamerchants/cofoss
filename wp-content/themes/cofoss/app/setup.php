@@ -44,7 +44,7 @@ add_action('after_setup_theme', function () {
         'relative-urls',
     ]);
 
-    add_image_size( 'banner', 1680, 400, array( 'top', 'center' ));
+    add_image_size( 'banner', 1680, 590, array( 'top', 'center' ));
 
     /**
      * Disable full-site editing support.

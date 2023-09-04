@@ -11,7 +11,7 @@
             <div class="swiper-slide">
                 {!! $image['url'] !!}
                 <div class="banner-text">
-                    <h1>{!! $image['title'] !!}</h1>
+                    <h1 class="has-text-align-left bold-heading-text">{!! $image['title'] !!}</h1>
                     <p>{!! $image['subtext'] !!}</p>
                 </div>
             </div>
