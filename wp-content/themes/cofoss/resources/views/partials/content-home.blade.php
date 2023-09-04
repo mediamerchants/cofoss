@@ -1,4 +1,4 @@
-<div class=" main-slider container-fluid">
+<div class="main-slider container-fluid">
     <div class="row">
 
     </div>
