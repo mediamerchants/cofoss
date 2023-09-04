@@ -6,7 +6,7 @@ namespace App\ACF;
 add_filter('acf/settings/save_json', __NAMESPACE__ . '\\acf_json_save');
 function acf_json_save($path)
 {
-    $path = get_stylesheet_directory() . '/public/acf_json/';
+    $path = get_stylesheet_directory() . '/acf_json/';
     return $path;
 }
 
@@ -14,7 +14,7 @@ add_filter('acf/settings/load_json', __NAMESPACE__ . '\\acf_json_load');
 function acf_json_load($paths)
 {
     unset($paths[0]);
-    $paths[] = get_stylesheet_directory() . '/public/acf_json/';
+    $paths[] = get_stylesheet_directory() . '/acf_json/';
 
     return $paths;
 }
