@@ -32,7 +32,7 @@
     "fontawesome": "^5.6.3",
     "ionicons": "^7.1.2",
     "superfish": "^1.7.10",
-    "swiper": "3.3.1",
+    "swiper": "^10.2.0",
     "watch": "^1.0.2"
   }
 }

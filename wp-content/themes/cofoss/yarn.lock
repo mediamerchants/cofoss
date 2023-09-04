@@ -7224,10 +7224,10 @@ svgo@^3.0.2:
     csso "^5.0.5"
     picocolors "^1.0.0"
 
-swiper@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-3.3.1.tgz#ae5cc5a1ae3abe0e98a175e6d7eb0370cd07ce88"
-  integrity sha512-MQvSuCezzHwYcy8zQl1WEIYojHxSJ4kWHH64pjcmG+FlRY8rGHkRKmxSwAkRr5svo9ZziniHRaJsJcTohJyuZw==
+swiper@^10.2.0:
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-10.2.0.tgz#e7369ff56f4e10069f2244a4436f732b8925deb0"
+  integrity sha512-nktQsOtBInJjr3f5DicxC8eHYGcLXDVIGPSon0QoXRaO6NjKnATCbQ8SZsD3dN1Ph1RH4EhVPwSYCcuDRFWHGQ==
 
 tapable@2.2.1, tapable@^2.0.0, tapable@^2.1.1, tapable@^2.2.0:
   version "2.2.1"
