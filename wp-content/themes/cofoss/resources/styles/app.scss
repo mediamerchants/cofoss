@@ -1,8 +1,16 @@
 @import 'bootstrap/scss/bootstrap';
 @import url('//unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css');
+@import "swiper/swiper-bundle.min.css";
+@import "common/fonts";
+@import "components/forms";
+@import "components/reset";
+@import "components/typography";
+@import "components/objects";
 @import 'layouts/header';
 @import 'layouts/footer';
+@import 'layouts/about';
 
+@import 'layouts/home';
 /*
 Theme Name: Monochrome Pro
 Theme URI: https://my.studiopress.com/themes/monochrome/
@@ -1675,4 +1683,35 @@ p.entry-meta {
     display: block;
   }
 
+}
+
+
+.swiper-wrapper{
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-lazy-loaded {
+  object-fit: cover !important;
+  width: 100% !important;
+  max-width: none !important;
 }
