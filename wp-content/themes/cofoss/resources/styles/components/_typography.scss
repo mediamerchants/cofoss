@@ -4,10 +4,10 @@
 body {
   background-color: #fff;
   color: #000;
-  font-family: Muli, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.875;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   margin: 0;
   overflow-x: hidden;
 }
@@ -111,14 +111,17 @@ blockquote::before {
 /* Headings
 --------------------------------------------- */
 
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-weight: 700;
+  color: #fff;
   line-height: 1.2;
   margin: 0 0 10px;
 }
@@ -170,4 +173,25 @@ h5 {
 
 h6 {
   font-size: 16px;
+}
+
+.sea-blue {
+  color:#439ccc
+}
+.green
+{
+  color:#44b063;
+}
+.white{
+  color: #fff;
+}
+.night{
+  color:#0d556d;
+}
+
+.sub-text{
+  font-family: 'Roboto';
+  font-weight: 600;
+  line-height: 0.85rem;
+  font-size: 14px;
 }

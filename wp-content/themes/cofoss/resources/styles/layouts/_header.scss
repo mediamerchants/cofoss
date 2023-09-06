@@ -83,13 +83,17 @@
   word-wrap: normal !important;
 }
 
-.site-header .custom-logo-link .custom-logo {
-  height: 50px;
+.site-header .logo-link .logo {
+  height: 80px;
   width: auto;
 }
 
 /* Site Navigation
 ---------------------------------------------------------------------------- */
+
+.cofoss-responsive-menu{
+  padding-top: 3.5rem;
+}
 
 .cofoss-nav-menu {
   clear: both;
