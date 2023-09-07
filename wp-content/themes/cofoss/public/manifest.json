@@ -1,0 +1,14 @@
+{
+  "app.css": "css/app.9d80d2.css",
+  "app.js": "js/app.520b81.js",
+  "editor.css": "css/editor.ef46db.css",
+  "editor.js": "js/editor.512605.js",
+  "runtime.js": "js/runtime.e97f88.js",
+  "fonts/arial_narrow.ttf": "fonts/arial_narrow.80aa2a.ttf",
+  "fonts/Roboto-Regular.ttf": "fonts/Roboto-Regular.6d220b.ttf",
+  "fonts/Roboto-Medium.ttf": "fonts/Roboto-Medium.50e73d.ttf",
+  "fonts/Roboto-Thin.ttf": "fonts/Roboto-Thin.a34eab.ttf",
+  "fonts/arial_rounded_bold.ttf": "fonts/arial_rounded_bold.206635.ttf",
+  "../theme.json": "../theme.json",
+  "entrypoints.json": "entrypoints.json"
+}
