@@ -21,8 +21,8 @@ $section_1_content_text = get_field('section_1_content_text');
                         <div class="row">
                             <div class="col-12">
                     <?php 
-                        echo $sectionTitle ? '<h2 class="section-title">'.$sectionTitle.'</h2>' : '';
-                        echo $sectionSubTitle ? '<p class="section-subtitle">'.$sectionSubTitle.'</p>' : '';
+                        echo $sectionTitle ? '<h2 class="section-title fade-in-up">'.$sectionTitle.'</h2>' : '';
+                        echo $sectionSubTitle ? '<p class="section-subtitle fade-in-up">'.$sectionSubTitle.'</p>' : '';
                     }
                     ?>
                             </div>
@@ -36,7 +36,7 @@ $section_1_content_text = get_field('section_1_content_text');
                     ?>
                         <div class="row">
                             <div class="col-12">
-                                <div class="content-paragraph"><?= $paragraph; ?></div>
+                                <div class="content-paragraph fade-in-up"><?= $paragraph; ?></div>
                             </div>
                         </div>
                     <?php
@@ -58,7 +58,7 @@ $section_1_content_text = get_field('section_1_content_text');
                             if($image){
                             ?>
                                 <div class="col-md-6">
-                                    <p class="2-col-2-img"><img src="<?= $image; ?>" /></p>
+                                    <p class="2-col-2-img fade-in-up"><img src="<?= $image; ?>" /></p>
                                 </div>
                             <?php
                             }
@@ -66,8 +66,8 @@ $section_1_content_text = get_field('section_1_content_text');
                             ?>
                                 <div class="col-md-6">
                                     <div class="col2-texts">
-                                        <?php echo $title ? '<h3 class="col-2-title">'.$title.'</h3>' : ''; ?>
-                                        <?php echo $paragraph ? '<p class="2-col-texts content-paragraph">'.$paragraph.'</p>' : ''; ?>
+                                        <?php echo $title ? '<h3 class="col-2-title fade-in-up">'.$title.'</h3>' : ''; ?>
+                                        <?php echo $paragraph ? '<p class="2-col-texts content-paragraph fade-in-up">'.$paragraph.'</p>' : ''; ?>
                                     </div>
                                </div>
 
@@ -103,11 +103,11 @@ $section_1_content_text = get_field('section_1_content_text');
                             }
                         ?>
                              <div class="col-md-4">
-                                <div class="<?= $extraClass; ?>">
-                                    <img src ="<?php echo $iconImg; ?>" />
+                                <div class="col-content <?= $extraClass; ?>">
+                                    <img class=" fade-in-up" src ="<?php echo $iconImg; ?>" />
                                     <div class="texts">
-                                        <?php echo  $title ? '<h3 class="sea-blue col-title">'.$title.'</h3>' : ''; ?>
-                                        <p class="column-description content-paragraph"><?php echo $description; ?></p>
+                                        <?php echo  $title ? '<h3 class="sea-blue col-title fade-in-up">'.$title.'</h3>' : ''; ?>
+                                        <p class="column-description content-paragraph fade-in-up"><?php echo $description; ?></p>
                                     </div>
                                  </div>
                              </div>
@@ -124,18 +124,21 @@ $section_1_content_text = get_field('section_1_content_text');
                     $fwTitle = get_sub_field('fullwidth_title');
                     $fwTextContent = get_sub_field('fullwidth_text_content');
                     $fwBGimage = get_sub_field('fullwidth_background_image');
+
+                    if($fwTitle || $fwTextContent || $fwBGimage){
                 ?>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="white fullwidth cta-section" style="background-image: url(<?php echo  $fwBGimage;?>'); background-repeat: no-repeat;">
-                            <div class="box"> 
-                                <h3><?php echo  $fwTitle; ?></h3>
-                                <div class="text"><?php echo  $fwTextContent; ?></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="white fullwidth cta-section" style="background-image: url('<?=  $fwBGimage;?>'); background-repeat: no-repeat;">
+                                    <div class="box"> 
+                                        <?php echo $fwTitle ? '<h3 class=" fade-in-up">'.$fwTitle.'</h3>' : ''; ?>
+                                        <?php echo $fwTextContent ? '<div class="text fade-in-up">'.$fwTextContent.'</div>': ''; ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
                 <?php
+                    }
                 }
 
                 if(get_row_layout() == 'list_items'){
@@ -144,11 +147,11 @@ $section_1_content_text = get_field('section_1_content_text');
                     <div class="row">
                         <div class="col-12">
                             <ul class="icon-item">
-                         <?php        while (have_rows('list_item')) : the_row(); 
+                         <?php while (have_rows('list_item')) : the_row(); 
                             $itemText = get_sub_field('item_text');
                             $itemIcon = get_sub_field('item_icon');
                         ?>
-                             <li class="display-flex">
+                             <li class="display-flex fade-in-up">
                                 <span class="icon"><img src="<?php echo $itemIcon; ?>" /></span>
                                 <span class="text content-paragraph"><?php echo  $itemText; ?></span>
                              </li>
@@ -194,14 +197,15 @@ $section_1_content_text = get_field('section_1_content_text');
                                 $position    = get_sub_field('position');
                                 $memberDesc = get_sub_field('member_description');
                     ?>
-                                 <div class="<?= $columnCls; ?> member">
+                                 <div class="<?= $columnCls; ?> member fade-in-up">
                                     <img src="<?= $memberImage; ?>" />
                                     <p class="name"><?= $memberName; ?></p>
-                                    <p class="position"><?= $position; ?></p>
+                                    <p class="position arrow"><?= $position; ?></p>
                     <?php
                                 if(have_rows('member_detail')){
                     ?>
                                          <div class="details">
+                                            <div class="detail-content">
                                             <p class="name"><?= $memberName; ?></p>
                                             <p class="position"><?= $position; ?></p>
                                             <p class="member-description content-paragraph"><?= $memberDesc; ?></p>
@@ -222,6 +226,7 @@ $section_1_content_text = get_field('section_1_content_text');
                                         <?php  endwhile; ?>
                                             </ul>
                                      <?php   } ?>
+                                            </div>
                                         </div>
                             <?php    } ?>
 
@@ -245,7 +250,7 @@ $section_1_content_text = get_field('section_1_content_text');
 
                                 ?>
                                 <div class="col-md-3">
-                                    <p class="brand">
+                                    <p class="brand fade-in-up">
                                         <img src="<?php echo $brandImage;  ?>" />
                                     </p>
                                 </div>

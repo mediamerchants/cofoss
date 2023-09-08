@@ -19,12 +19,12 @@ $emailAddress        = get_field('email_address','option');
         <?php endif; ?>
 
         <div class="contact-info">
-          <h3><?php echo $contactSectionLabel; ?></h3>
-          <label class="phone"><?php echo $phoneNumberLabel ? $phoneNumberLabel : 'P:'; ?></label>
-          <a href="tel:<?php echo $phoneNumber; ?>"><?php echo $phoneNumber; ?></a>
+        <?php echo $contactSectionLabel ? '<h3>'.$contactSectionLabel.'</h3>' : ''; ?>
+          <?php echo $phoneNumberLabel ? '<label class="phone">'. $phoneNumberLabel.'</label>' : ''; ?>
+          <?php echo $phoneNumber ? '<a href="tel:'.$phoneNumber.'">'.$phoneNumber.'</a>' : ''; ?>
 
-          <label class="email-address"><?php echo $emailLabel ? $emailLabel : 'E:'; ?></label>
-          <a href="mailto:<?php echo $emailAddress; ?>"><?php echo $emailAddress; ?></a>
+          <?php echo $emailLabel ? '<label class="email-address">'.$emailLabel.'</label>' : ''; ?>
+          <?php echo $emailAddress ? '<a href="mailto:'.$emailAddress.'">'.$emailAddress.'</a>' : ''; ?>
         </div>
         
       </div> <!-- .container12 -->
