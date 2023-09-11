@@ -186,7 +186,7 @@ $extraClass = get_field('extra_class');
                     ?>
                     <div class="row">
                         <div class="col-12">
-                            <p>
+                            <p class="fade-in-up">
                             <span style="display: block; width:<?php echo $width; ?>; height:<?php echo $height; ?>; background-color:<?php echo $color; ?>; margin: <?php echo $marginTop; ?> 0 <?php echo $marginBottom; ?>;"></span>
                             </p>
                         </div>
@@ -210,7 +210,7 @@ $extraClass = get_field('extra_class');
                                 $memberDesc = get_sub_field('member_description');
                     ?>
                                  <div class="<?= $columnCls; ?> member fade-in-up">
-                                    <img src="<?= $memberImage; ?>" />
+                                    <img class="image" src="<?= $memberImage; ?>" />
                                     <p class="name"><?= $memberName; ?></p>
                                     <p class="position arrow"><?= $position; ?></p>
                     <?php

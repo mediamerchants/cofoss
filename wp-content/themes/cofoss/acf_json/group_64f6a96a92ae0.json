@@ -724,7 +724,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "100px",
+                            "default_value": "42px",
                             "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
@@ -744,7 +744,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "2px",
+                            "default_value": "1px",
                             "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
@@ -1143,6 +1143,13 @@
                 "operator": "==",
                 "value": "front_page"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-general.blade.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1154,5 +1161,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694047196
+    "modified": 1694415227
 }

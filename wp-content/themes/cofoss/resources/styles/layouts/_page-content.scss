@@ -1,29 +1,36 @@
 .page-content{
     padding: 0 25px;
+    a{
+        color: #000;
+        &:hover{
+            color: #44B063;
+        }
+    }
     p{
         padding: 0;
         margin: 0;
     }
     .page-title{
-        font-size: 60px;
+        font-size: 40px;
         padding: 30px 0;
     }
     .section-title{
         color: #4D9ECD;
-        font-size: 48px;
-        font-family: 'Arial Rounded MT Bold';
+        font-size: 40px;
+        font-family: 'Arial Rounded MT Bold', 'sans-serif';
         font-weight: 400;
+        line-height: 1;
     }
     .section-subtitle{
         color: #000;
-        font-size: 21px;
-        font-family: 'Arial Rounded MT Bold';
+        font-size: 18px;
+        font-family: 'Arial Rounded MT Bold', 'sans-serif';
         font-weight: 700;
     }
     .content-paragraph{
         font-family: 'Roboto', arial;
-        font-size: 19px;
-        line-height: 35px;
+        font-size: 16px;
+        line-height: 1.875;
         color: #000;
     }
     .display-flex{
@@ -74,13 +81,13 @@
             max-width: 1320px;
             width: 100%;
             margin: auto;
-            padding: 0 25px;
+            padding: 0 30px;
         }
         &.cta-section{
             padding: 100px 0;
         }
         h3{
-            font-size: 45px;
+            font-size: 40px;
         }
         p{
             padding: 0;
@@ -89,7 +96,7 @@
             font-style: italic;
         }
         span{
-            font-size: 19px;
+            font-size: 16px;
         }
         
     }
@@ -98,6 +105,9 @@
         text-align: center;
         .member{
             margin-bottom: 40px;
+            .image{
+                cursor: pointer;
+            }
             .name{
                 font-size: 28px;
                 color: #4D9ECD;
@@ -121,7 +131,7 @@
                 max-width: 100vw;
                 
                 .detail-content{
-                    max-width: 1295px;
+                    max-width: 1320px;
                     width: 100%;
                     margin: auto;
                     background: #f3f3f3;
@@ -199,18 +209,42 @@
             }
         }
     }
+
+    ol.terms{
+        margin: 0 30px;
+        li{
+            list-style-type: auto;
+            margin: 30px 0;
+
+            span.title{
+                font-family: "Arial Rounded MT Bold";
+                display: block;
+            }
+            span.description{
+                display: block;
+            }
+            ol{
+                padding: 0;
+                margin: -20px 20px 20px;
+                li{
+                    list-style-type: upper-alpha;
+                }
+            }
+        }
+    }
 }
 
-@media(min-width: 1023px){
+@media(min-width: 1024px){
     .page-content{
 
         padding: 0;
         .page-title{
-            font-size: 65px;
+            font-size: 60px;
             padding: 30px 0;
         }
         .section-title{
-            font-size: 75px;
+            font-size: 48px;
+            line-height: 1.2;
         }
 
         .fullwidth{
@@ -238,6 +272,14 @@
             .col2-texts{
                 .col-2-title{
                     font-size: 46px;
+                }
+            }
+        }
+
+        ol.terms{
+            li{
+                ol{
+                    margin: -20px 40px 20px 40px;
                 }
             }
         }

@@ -8,9 +8,9 @@ $emailAddress        = get_field('email_address','option');
 
 ?>
 <footer class="content-info">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="container12">
+      <div class="col-12">
 
         <?php if($footerLogo): ?>
           <a href="<?php echo home_url(); ?>">
