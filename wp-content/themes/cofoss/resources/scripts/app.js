@@ -2,6 +2,7 @@ import domReady from '@roots/sage/client/dom-ready';
 import 'bootstrap';
 import 'superfish';
 import './lib/responsive.min.js';
+import './lib/custom.js';
 import Swiper from "swiper";
 import { Navigation, Pagination } from 'swiper/modules';
 /**
