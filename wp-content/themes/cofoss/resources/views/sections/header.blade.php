@@ -1,12 +1,14 @@
 @php
 $logo = get_field('logo','options');
+$logo_m = get_field('logo_mobile','options');
 @endphp
 <header class="site-header" itemscope="" itemtype="https://schema.org/WPHeader">
     <div class="wrap">
         <div class="title-area">
             <a href="/" class="logo-link" rel="home"
                aria-current="page">
-                <img class="logo" src="{!! $logo !!}">
+                <img class="logo desktop" src="{!! $logo !!}">
+                <img class="logo mobile" src="{!! $logo_m ? $logo_m : $logo !!}">
             </a>
         </div>
         <nav class="nav-primary cofoss-responsive-menu" aria-label="Main" itemscope="" itemtype="https://schema.org/SiteNavigationElement" id="cofoss-nav-primary">

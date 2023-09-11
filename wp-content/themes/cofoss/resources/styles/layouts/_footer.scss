@@ -3,6 +3,10 @@ footer{
     color: #fff;
     padding: 45px 0 30px;
 
+    .col-12{
+        padding: 0 47px;
+    }
+
     a{
         color: #fff;
         text-decoration: none;
@@ -13,7 +17,7 @@ footer{
         img{
             &.logo{
                 outline: none;
-                width: 442px;
+                width: 340px;
                 height: auto;
             }
         }

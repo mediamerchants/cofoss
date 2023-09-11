@@ -7,12 +7,22 @@
   background-color: #fff;
   border-bottom: 1px solid transparent;
   min-height: 80px;
-  padding: 10px 40px;
+  padding: 0 40px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 9999;
+
+  img{
+    &.desktop{
+      display: none;
+    }
+    &.mobile{
+      display: block;
+    }
+  }
+  
 }
 
 .admin-bar .site-header {
@@ -92,7 +102,7 @@
 ---------------------------------------------------------------------------- */
 
 .cofoss-responsive-menu{
-  padding-top: 3.5rem;
+  padding-top: 0;
 }
 
 .cofoss-nav-menu {
@@ -136,7 +146,7 @@
 .cofoss-nav-menu .current-menu-item > a,
 .cofoss-nav-menu .toggle-header-search:focus,
 .cofoss-nav-menu .toggle-header-search:hover {
-  color: #06c;
+  color: #44B063;
 }
 
 .cofoss-nav-menu .sub-menu {
@@ -320,4 +330,20 @@
   right: 50%;
   top: calc(50% - 5px);
   transform: scale(3);
+}
+
+@media(min-width: 1024px){
+  .site-header{
+    img{
+      &.desktop{
+        display: block;
+      }
+      &.mobile{
+        display: none;
+      }
+    }
+  }
+  .cofoss-responsive-menu {
+    padding-top: 2rem;
+  }
 }

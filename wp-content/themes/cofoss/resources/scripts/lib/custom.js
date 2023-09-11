@@ -7,7 +7,7 @@
 
 })()
 
-$(document).on('click','.members .member .name',function(){
+$(document).on('click','.members .member .name, .members .member .image',function(){
     var dis = $(this).parent();
     var left = dis.position().left;
     left = left + 10;
