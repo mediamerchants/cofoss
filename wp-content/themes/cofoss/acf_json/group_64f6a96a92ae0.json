@@ -1115,6 +1115,199 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_65000b64fa833": {
+                    "key": "layout_65000b64fa833",
+                    "name": "contact_detail_and_map",
+                    "label": "Contact Detail and Map",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65000b9afa835",
+                            "label": "Layout",
+                            "name": "layout",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "1": "25% by 75% Column Layout",
+                                "2": "50% by 50% Column Layout"
+                            },
+                            "default_value": 1,
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_65000bf3fa836",
+                            "label": "Address Contacts and Map",
+                            "name": "address_contacts_and_map",
+                            "aria-label": "",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_65000c5014f32": {
+                                    "key": "layout_65000c5014f32",
+                                    "name": "address_and_contact_details",
+                                    "label": "Address & Contact Details",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_65000c5dfa838",
+                                            "label": "Address",
+                                            "name": "address",
+                                            "aria-label": "",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "placeholder": "",
+                                            "new_lines": ""
+                                        },
+                                        {
+                                            "key": "field_65000c74fa839",
+                                            "label": "Phone",
+                                            "name": "phone",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_65000c7dfa83a",
+                                            "label": "Fax",
+                                            "name": "fax",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_65000c84fa83b",
+                                            "label": "Email",
+                                            "name": "email",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_65000e02efb80",
+                                            "label": "Background Color",
+                                            "name": "background_color",
+                                            "aria-label": "",
+                                            "type": "color_picker",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "enable_opacity": 0,
+                                            "return_format": "string"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "layout_65000d312092d": {
+                                    "key": "layout_65000d312092d",
+                                    "name": "map",
+                                    "label": "Map",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_65000d372092f",
+                                            "label": "Map",
+                                            "name": "map",
+                                            "aria-label": "",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "placeholder": "",
+                                            "new_lines": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add Row"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -1161,5 +1354,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694415227
+    "modified": 1694505267
 }

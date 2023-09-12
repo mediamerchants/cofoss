@@ -283,6 +283,54 @@ $extraClass = get_field('extra_class');
                 }
             }
 
+            if(get_row_layout() == 'contact_detail_and_map'){
+                $layout = get_sub_field('layout');
+                $col1 = $layout != '1' ? 'col-md-6' : 'col-md-4';
+                $col2 = $layout != '1' ? 'col-md-6' : 'col-md-8';
+                
+                if(have_rows('address_contacts_and_map')){
+                ?> 
+                    <div class="row address-contacts-map">
+                <?php
+                        while(have_rows('address_contacts_and_map')) : the_row();
+                        
+                            
+                        
+                            $address = get_sub_field('address');
+                            $phone = get_sub_field('phone');
+                            $fax = get_sub_field('fax');
+                            $email = get_sub_field('email');
+                            $map = get_sub_field('map');
+                            $background_color = get_sub_field('background_color');
+
+                            if( $address || $phone || $fax || $email ){
+                ?>
+                                 <div class="address-contacts <?= $col1; ?>" style="background-color: <?= $background_color; ?> ">
+                                   <div class="info">
+                                       <?= $address ? '<div class="address-wrapper">'.$address.'</div>' : ''; ?>
+                                       <?= $phone ? '<p class="phone fade-in-up">'.$phone.'</p>' : ''; ?>
+                                       <?= $fax ? '<p class="fax fade-in-up">'.$fax.'</p>' : ''; ?> 
+                                       <?= $email ? '<p class="email fade-in-up">'.$email.'</p>' : ''; ?>
+                                   </div>
+                                 </div>
+                <?Php
+                            }
+                            if($map){
+                ?>
+                                 <div class="map-detail fade-in-up <?= $col2; ?>">
+                                  <?= $map; ?>
+                                 </div>
+                <?php
+                            }
+                            
+                        endwhile;
+                ?>
+                    </div> <!-- .row contacts-map -->
+                
+        <?php
+                }
+            }
+
         endwhile;
     }
 

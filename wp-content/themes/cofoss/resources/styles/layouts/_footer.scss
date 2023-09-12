@@ -4,7 +4,7 @@ footer{
     padding: 45px 0 30px;
 
     .col-12{
-        padding: 0 47px;
+        padding: 0 30px;
     }
 
     a{
@@ -39,6 +39,11 @@ footer{
                 display: inline-block;
                 margin-right: 20px;
             }
+        }
+    }
+    @media(min-width: 1024px){
+        .col-12{
+            padding: 0 50px;
         }
     }
 }

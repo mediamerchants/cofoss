@@ -232,6 +232,25 @@
             }
         }
     }
+    .address-contacts-map{
+        margin: 0;
+        .map-detail{
+            padding: 0;
+        }
+        .address-contacts{
+            margin-bottom: 40px;
+            .info{
+                padding: 40px;
+                .address-wrapper{
+                    margin-bottom: 20px;
+                    h3{
+                        color: #000;
+                    }
+                }
+            }
+        }
+        
+    }
 }
 
 @media(min-width: 1024px){
@@ -281,6 +300,14 @@
                 ol{
                     margin: -20px 40px 20px 40px;
                 }
+            }
+        }
+        .address-contacts-map{
+            .address-contacts{
+                margin-bottom: 0;
+            }
+            .map-detail{
+                padding: 0 0 0 40px;
             }
         }
     }
