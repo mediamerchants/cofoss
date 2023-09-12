@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'superfish';
 import './lib/responsive.min.js';
 import './lib/custom.js';
+import './lib/block-css.js';
 import Swiper from "swiper";
 import { Navigation, Pagination } from 'swiper/modules';
 /**
