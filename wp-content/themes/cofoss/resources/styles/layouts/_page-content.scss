@@ -202,6 +202,9 @@
     }
     .col2-layout{
         .col2-texts{
+            position: relative;
+            top: 10px;
+            padding-left: 0;
             .col-2-title{
                 font-size: 38px;
                 color: #44B063;
@@ -231,6 +234,25 @@
                 }
             }
         }
+    }
+    .address-contacts-map{
+        margin: 0;
+        .map-detail{
+            padding: 0;
+        }
+        .address-contacts{
+            margin-bottom: 40px;
+            .info{
+                padding: 40px;
+                .address-wrapper{
+                    margin-bottom: 20px;
+                    h3{
+                        color: #000;
+                    }
+                }
+            }
+        }
+        
     }
 }
 
@@ -270,6 +292,10 @@
         } 
         .col2-layout{
             .col2-texts{
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                padding-left: 50px;
                 .col-2-title{
                     font-size: 46px;
                 }
@@ -281,6 +307,14 @@
                 ol{
                     margin: -20px 40px 20px 40px;
                 }
+            }
+        }
+        .address-contacts-map{
+            .address-contacts{
+                margin-bottom: 0;
+            }
+            .map-detail{
+                padding: 0 0 0 40px;
             }
         }
     }
