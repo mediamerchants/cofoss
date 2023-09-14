@@ -22,7 +22,7 @@ $extraClass = get_field('extra_class');
     </div>
 <?php 
         if(have_rows('set_content')){
-            
+        
             while (have_rows('set_content')) : the_row();
             
                 if(get_row_layout() == 'section_title' || get_row_layout() == 'section_subtitle'){
@@ -53,20 +53,20 @@ $extraClass = get_field('extra_class');
                         </div>
                     <?php
                     }
-
+    
                 }
-
-
+    
+    
                 if(get_row_layout() == '2_column_layout'){
                     if(have_rows('2_column_content')){
                     ?>
                         <div class="row col2-layout">
                     <?php
                         while (have_rows('2_column_content')) : the_row();
-                             $image = get_sub_field('image_content');
-                             $title = get_sub_field('2_column_title');
-                             $paragraph = get_sub_field('2_column_paragraph');
-
+                                $image = get_sub_field('image_content');
+                                $title = get_sub_field('2_column_title');
+                                $paragraph = get_sub_field('2_column_paragraph');
+    
                             if($image){
                             ?>
                                 <div class="col-md-6">
@@ -81,8 +81,8 @@ $extraClass = get_field('extra_class');
                                         <?php echo $title ? '<h3 class="col-2-title fade-in-up">'.$title.'</h3>' : ''; ?>
                                         <?php echo $paragraph ? '<p class="2-col-texts content-paragraph fade-in-up">'.$paragraph.'</p>' : ''; ?>
                                     </div>
-                               </div>
-
+                                </div>
+    
                             <?php
                             }
                                 
@@ -114,15 +114,15 @@ $extraClass = get_field('extra_class');
                                 $extraClass = $displayFlex ? ' display-flex ' : '';
                             }
                         ?>
-                             <div class="col-md-4">
+                                <div class="col-md-4">
                                 <div class="col-content <?= $extraClass; ?>">
                                     <img class=" fade-in-up" src ="<?php echo $iconImg; ?>" />
                                     <div class="texts">
                                         <?php echo  $title ? '<h3 class="sea-blue col-title fade-in-up">'.$title.'</h3>' : ''; ?>
                                         <p class="column-description content-paragraph fade-in-up"><?php echo $description; ?></p>
                                     </div>
-                                 </div>
-                             </div>
+                                    </div>
+                                </div>
                     <?php
                         endwhile;
                     ?>
@@ -131,12 +131,12 @@ $extraClass = get_field('extra_class');
                     }
                     
                 }
-
+    
                 if(get_row_layout() == 'fullwidth_content'){
                     $fwTitle = get_sub_field('fullwidth_title');
                     $fwTextContent = get_sub_field('fullwidth_text_content');
                     $fwBGimage = get_sub_field('fullwidth_background_image');
-
+    
                     if($fwTitle || $fwTextContent || $fwBGimage){
                 ?>
                         <div class="row">
@@ -152,21 +152,21 @@ $extraClass = get_field('extra_class');
                 <?php
                     }
                 }
-
+    
                 if(get_row_layout() == 'list_items'){
                     if(have_rows('list_item')){
                 ?>
                     <div class="row">
                         <div class="col-12">
                             <ul class="icon-item">
-                         <?php while (have_rows('list_item')) : the_row(); 
+                            <?php while (have_rows('list_item')) : the_row(); 
                             $itemText = get_sub_field('item_text');
                             $itemIcon = get_sub_field('item_icon');
                         ?>
-                             <li class="display-flex fade-in-up">
+                                <li class="display-flex fade-in-up">
                                 <span class="icon"><img src="<?php echo $itemIcon; ?>" /></span>
                                 <span class="text content-paragraph"><?php echo  $itemText; ?></span>
-                             </li>
+                                </li>
                     <?php        endwhile; ?>
                             </ul>
                         </div>
@@ -175,7 +175,7 @@ $extraClass = get_field('extra_class');
                     }
                     
                 }
-
+    
                 
                 if(get_row_layout() == 'separator'){
                     $color = get_sub_field('line_separator_color');
@@ -191,14 +191,14 @@ $extraClass = get_field('extra_class');
                             </p>
                         </div>
                     </div>
-                 <?php   
+                    <?php   
                 }
-
+    
                 if(get_row_layout() == 'team_member'){
-
+    
                     $columnSize = get_sub_field('set_column_size');
                     $columnCls = $columnSize < 4 ? 'col-md-4' : 'col-md-3';
-
+    
                     if(have_rows('team_member')){
                     ?>
                         <div class="row members">
@@ -209,15 +209,15 @@ $extraClass = get_field('extra_class');
                                 $position    = get_sub_field('position');
                                 $memberDesc = get_sub_field('member_description');
                     ?>
-                                 <div class="<?= $columnCls; ?> member fade-in-up">
-                                    <img class="image" src="<?= $memberImage; ?>" />
+                                    <div class="<?= $columnCls; ?> col-sm-6 member fade-in-up">
+                                    <img class="image" alt="<?= $memberName; ?>" src="<?= $memberImage; ?>" />
                                     <p class="name"><?= $memberName; ?></p>
                                     <p class="position arrow"><?= $position; ?></p>
                     <?php
                                 if(have_rows('member_detail')){
                     ?>
-                                         <div class="details">
-                                            <div class="detail-content">
+                                    <div class="details">
+                                        <div class="detail-content">
                                             <p class="name"><?= $memberName; ?></p>
                                             <p class="position"><?= $position; ?></p>
                                             <p class="member-description content-paragraph"><?= $memberDesc; ?></p>
@@ -230,25 +230,25 @@ $extraClass = get_field('extra_class');
                                             $title = get_sub_field('title');
                                             $description = get_sub_field('detail_description');
                                     ?>
-                                            <li>
-                                                 <span class="detail-title"><?= $title; ?></span>
-                                                 <span class="detail-description"><?= $description; ?></span>
-                                             </li>
-
+                                                    <li>
+                                                        <span class="detail-title"><?= $title; ?></span>
+                                                        <span class="detail-description"><?= $description; ?></span>
+                                                    </li>
+    
                                         <?php  endwhile; ?>
                                             </ul>
-                                     <?php   } ?>
-                                            </div>
-                                        </div>
-                            <?php    } ?>
-
+                                        <?php   } ?>
+                                        </div> <!-- .detail-content -->
+                                    </div>
+                            <?php } ?>
+    
                                 </div>
-                           <?php  endwhile; ?>
+                            <?php  endwhile; ?>
                         </div>
                 <?php
                     }
-
-
+    
+    
                 }
                 if(get_row_layout() == 'brands'){
                     if(have_rows('brands')){
@@ -259,20 +259,68 @@ $extraClass = get_field('extra_class');
                                     $brandImage = get_sub_field('brand_image');
                                     $brandName = get_sub_field('brand_name');
                                     $brandUrl = get_sub_field('brand_url');
-
+    
                                 ?>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-6">
                                     <p class="brand fade-in-up">
-                                        <img src="<?php echo $brandImage;  ?>" />
+                                        <img alt="<?= $brandName; ?>" src="<?php echo $brandImage;  ?>" />
                                     </p>
                                 </div>
                             <?php endwhile; ?>
                         </div>
-
+    
                 <?php
                     }
                 }
-
+    
+                if(get_row_layout() == 'contact_detail_and_map'){
+                    $layout = get_sub_field('layout');
+                    $col1 = $layout != '1' ? 'col-md-6' : 'col-md-4';
+                    $col2 = $layout != '1' ? 'col-md-6' : 'col-md-8';
+                    
+                    if(have_rows('address_contacts_and_map')){
+                    ?> 
+                        <div class="row address-contacts-map">
+                    <?php
+                            while(have_rows('address_contacts_and_map')) : the_row();
+                            
+                                
+                            
+                                $address = get_sub_field('address');
+                                $phone = get_sub_field('phone');
+                                $fax = get_sub_field('fax');
+                                $email = get_sub_field('email');
+                                $map = get_sub_field('map');
+                                $background_color = get_sub_field('background_color');
+    
+                                if( $address || $phone || $fax || $email ){
+                    ?>
+                                     <div class="address-contacts <?= $col1; ?>" style="background-color: <?= $background_color; ?> ">
+                                       <div class="info">
+                                           <?= $address ? '<div class="address-wrapper">'.$address.'</div>' : ''; ?>
+                                           <?= $phone ? '<p class="phone fade-in-up">'.$phone.'</p>' : ''; ?>
+                                           <?= $fax ? '<p class="fax fade-in-up">'.$fax.'</p>' : ''; ?> 
+                                           <?= $email ? '<p class="email fade-in-up">'.$email.'</p>' : ''; ?>
+                                       </div>
+                                     </div>
+                    <?Php
+                                }
+                                if($map){
+                    ?>
+                                     <div class="map-detail fade-in-up <?= $col2; ?>">
+                                      <?= $map; ?>
+                                     </div>
+                    <?php
+                                }
+                                
+                            endwhile;
+                    ?>
+                        </div> <!-- .row contacts-map -->
+                    
+            <?php
+                    }
+                }
+    
             endwhile;
         }
 

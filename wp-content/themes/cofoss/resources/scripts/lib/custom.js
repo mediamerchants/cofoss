@@ -17,6 +17,14 @@ $(document).on('click','.members .member .name, .members .member .image',functio
         $('.members .member').removeClass('active');
         dis.addClass('active');
         dis.children('.details').css({'left':'-'+left+'px'});
+
+        setTimeout(function(){
+            var top  = dis.position().top;
+            $('html, body').animate({
+                scrollTop: top - 120,
+            },200);
+        },500);
+        
     }
 });
 
