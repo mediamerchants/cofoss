@@ -197,8 +197,8 @@ $section_1_content_text = get_field('section_1_content_text');
                                 $position    = get_sub_field('position');
                                 $memberDesc = get_sub_field('member_description');
                     ?>
-                                 <div class="<?= $columnCls; ?> member fade-in-up">
-                                    <img class="image" src="<?= $memberImage; ?>" />
+                                 <div class="<?= $columnCls; ?> col-sm-6 member fade-in-up">
+                                    <img class="image" alt="<?= $memberName; ?>" src="<?= $memberImage; ?>" />
                                     <p class="name"><?= $memberName; ?></p>
                                     <p class="position arrow"><?= $position; ?></p>
                     <?php
@@ -249,9 +249,9 @@ $section_1_content_text = get_field('section_1_content_text');
                                     $brandUrl = get_sub_field('brand_url');
 
                                 ?>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-6">
                                     <p class="brand fade-in-up">
-                                        <img src="<?php echo $brandImage;  ?>" />
+                                        <img alt="<?= $brandName; ?>" src="<?php echo $brandImage;  ?>" />
                                     </p>
                                 </div>
                             <?php endwhile; ?>

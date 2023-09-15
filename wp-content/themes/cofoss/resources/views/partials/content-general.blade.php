@@ -126,7 +126,7 @@ $extraClass = get_field('extra_class');
                     ?>
                             <div class="col-md-4">
                             <div class="col-content <?= $extraClass; ?>">
-                                <img class=" fade-in-up" src ="<?php echo $iconImg; ?>" />
+                                <img class="fade-in-up" src ="<?php echo $iconImg; ?>" />
                                 <div class="texts">
                                     <?php echo  $title ? '<h3 class="sea-blue col-title fade-in-up">'.$title.'</h3>' : ''; ?>
                                     <p class="column-description content-paragraph fade-in-up"><?php echo $description; ?></p>
@@ -219,8 +219,8 @@ $extraClass = get_field('extra_class');
                             $position    = get_sub_field('position');
                             $memberDesc = get_sub_field('member_description');
                 ?>
-                                <div class="<?= $columnCls; ?> member fade-in-up">
-                                <img class="image" src="<?= $memberImage; ?>" />
+                                <div class="<?= $columnCls; ?> col-sm-6 member fade-in-up">
+                                <img class="image" alt="<?= $memberName; ?>" src="<?= $memberImage; ?>" />
                                 <p class="name"><?= $memberName; ?></p>
                                 <p class="position arrow"><?= $position; ?></p>
                 <?php
@@ -271,9 +271,9 @@ $extraClass = get_field('extra_class');
                                 $brandUrl = get_sub_field('brand_url');
 
                             ?>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-6">
                                 <p class="brand fade-in-up">
-                                    <img src="<?php echo $brandImage;  ?>" />
+                                    <img alt="<?= $brandName; ?>" src="<?php echo $brandImage;  ?>" />
                                 </p>
                             </div>
                         <?php endwhile; ?>
