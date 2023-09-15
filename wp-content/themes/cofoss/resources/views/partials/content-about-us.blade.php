@@ -58,9 +58,10 @@ $extraClass = get_field('extra_class');
 
 
                 if(get_row_layout() == '2_column_layout'){
+                    $extraClassColumn2 = get_sub_field('extra_class_column_2');
                     if(have_rows('2_column_content')){
                     ?>
-                        <div class="row col2-layout">
+                        <div class="row col2-layout <?= $extraClassColumn2; ?>">
                     <?php
                         while (have_rows('2_column_content')) : the_row();
                              $image = get_sub_field('image_content');
@@ -95,9 +96,10 @@ $extraClass = get_field('extra_class');
                 }
                 
                 if(get_row_layout() == '3_column_layout'){
+                    $extraClassCol3 = get_sub_field('extra_class_column_3');
                     if(have_rows('column_content')){
                     ?>
-                        <div class="row col3-layout">
+                        <div class="row col3-layout <?= $extraClassCol3; ?>">
                     <?php
                         while (have_rows('column_content')) : the_row();
                             $iconImg = get_sub_field('icon_or_image');
