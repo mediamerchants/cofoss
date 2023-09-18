@@ -161,7 +161,7 @@
                 font-size: 21px;
                 color: #000;
                 margin-bottom: 10px;
-                padding-bottom: 30px;
+                padding-bottom: 0;
             }
             .details{
                 display: none;
@@ -232,6 +232,10 @@
                         animation-name: fadeInDown;
                     }
                 }
+            }
+            .arrow{
+                height: 31px;
+                margin: -5px 0 12px;
             }
         }
     }
