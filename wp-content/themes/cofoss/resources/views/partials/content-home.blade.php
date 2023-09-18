@@ -200,15 +200,16 @@ $section_1_content_text = get_field('section_1_content_text');
                                  <div class="<?= $columnCls; ?> col-sm-6 member fade-in-up">
                                     <img class="image" alt="<?= $memberName; ?>" src="<?= $memberImage; ?>" />
                                     <p class="name"><?= $memberName; ?></p>
-                                    <p class="position arrow"><?= $position; ?></p>
+                                    <p class="position"><?= $position; ?></p>
                     <?php
-                                if(have_rows('member_detail')){
-                    ?>
-                                         <div class="details">
-                                            <div class="detail-content">
-                                            <p class="name"><?= $memberName; ?></p>
-                                            <p class="position"><?= $position; ?></p>
-                                            <p class="member-description content-paragraph"><?= $memberDesc; ?></p>
+                                if($memberDesc || have_rows('member_detail')){
+                    ?>  
+                                    <p class="arrow"></p>
+                                    <div class="details">
+                                    <div class="detail-content">
+                                    <p class="name"><?= $memberName; ?></p>
+                                    <p class="position"><?= $position; ?></p>
+                                    <p class="member-description content-paragraph"><?= $memberDesc; ?></p>
                                     <?php
                                         if(have_rows('member_detail')){
                                     ?>
