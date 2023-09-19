@@ -10,21 +10,24 @@
 $(document).on('click','.members .member .name, .members .member .image',function(){
     var dis = $(this).parent();
     var left = dis.position().left;
+    var hasDetail = dis.find('.details');
     left = left + 10;
-    if(dis.hasClass('active')){
-        dis.removeClass('active');
-    }else{
-        $('.members .member').removeClass('active');
-        dis.addClass('active');
-        dis.children('.details').css({'left':'-'+left+'px'});
+    if(hasDetail.length > 0){
+        if(dis.hasClass('active')){
+            dis.removeClass('active');
+        }else{
+            $('.members .member').removeClass('active');
+            dis.addClass('active');
+            dis.children('.details').css({'left':'-'+left+'px'});
 
-        setTimeout(function(){
-            var top  = dis.position().top;
-            $('html, body').animate({
-                scrollTop: top - 120,
-            },200);
-        },500);
-        
+            setTimeout(function(){
+                var top  = dis.position().top;
+                $('html, body').animate({
+                    scrollTop: top - 120,
+                },200);
+            },500);
+            
+        }
     }
 });
 
