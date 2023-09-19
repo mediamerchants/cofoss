@@ -2,13 +2,14 @@
 $pageTitle = get_field('page_title');
 $pageTitleSubtext = get_field('page_title_subtext');
 $pageTitleBGImage = get_field('title_background_image');
+$pageTitleBGColor = get_field('page_title_background_color');
 $extraClass = get_field('extra_class');
 @endphp
 
 <div class="container page-content">
     <div class="row">
         <div class="col-12">
-            <div class="fullwidth" style="background-image: url({!! $pageTitleBGImage !!}); background-repeat: no-repeat;">
+            <div class="fullwidth" style="background-image: url({!! $pageTitleBGImage !!}); background-repeat: no-repeat; <?= $pageTitleBGColor ? 'background-color:'.$pageTitleBGColor.';' : ''; ?>">
                 @if($pageTitle)
                     <div class="box">
                         <h1 class="page-title {!! $extraClass !!} fade-in-up">{!! $pageTitle !!}</h1>
@@ -68,9 +69,10 @@ $extraClass = get_field('extra_class');
 
 
             if(get_row_layout() == '2_column_layout'){
+                $extraClassColumn2 = get_sub_field('extra_class_column_2');
                 if(have_rows('2_column_content')){
                 ?>
-                    <div class="row col2-layout">
+                    <div class="row col2-layout <?= $extraClassColumn2; ?>">
                 <?php
                     while (have_rows('2_column_content')) : the_row();
                             $image = get_sub_field('image_content');
@@ -105,9 +107,10 @@ $extraClass = get_field('extra_class');
             }
             
             if(get_row_layout() == '3_column_layout'){
+                $extraClassCol3 = get_sub_field('extra_class_column_3');
                 if(have_rows('column_content')){
                 ?>
-                    <div class="row col3-layout">
+                    <div class="row col3-layout <?= $extraClassCol3; ?>">
                 <?php
                     while (have_rows('column_content')) : the_row();
                         $iconImg = get_sub_field('icon_or_image');
@@ -222,10 +225,11 @@ $extraClass = get_field('extra_class');
                                 <div class="<?= $columnCls; ?> col-sm-6 member fade-in-up">
                                 <img class="image" alt="<?= $memberName; ?>" src="<?= $memberImage; ?>" />
                                 <p class="name"><?= $memberName; ?></p>
-                                <p class="position arrow"><?= $position; ?></p>
+                                <p class="position"><?= $position; ?></p>
                 <?php
-                            if(have_rows('member_detail')){
+                            if($memberDesc || have_rows('member_detail')){
                 ?>
+                                <p class="arrow"></p>
                                 <div class="details">
                                     <div class="detail-content">
                                         <p class="name"><?= $memberName; ?></p>

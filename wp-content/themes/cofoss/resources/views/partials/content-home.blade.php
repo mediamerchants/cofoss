@@ -46,9 +46,10 @@ $section_1_content_text = get_field('section_1_content_text');
 
 
                 if(get_row_layout() == '2_column_layout'){
+                    $extraClassColumn2 = get_sub_field('extra_class_column_2');
                     if(have_rows('2_column_content')){
                     ?>
-                        <div class="row col2-layout">
+                        <div class="row col2-layout <?= $extraClassColumn2; ?>">
                     <?php
                         while (have_rows('2_column_content')) : the_row();
                              $image = get_sub_field('image_content');
@@ -83,9 +84,10 @@ $section_1_content_text = get_field('section_1_content_text');
                 }
                 
                 if(get_row_layout() == '3_column_layout'){
+                    $extraClassCol3 = get_sub_field('extra_class_column_3');
                     if(have_rows('column_content')){
                     ?>
-                        <div class="row col3-layout">
+                        <div class="row col3-layout <?= $extraClassCol3; ?>">
                     <?php
                         while (have_rows('column_content')) : the_row();
                             $iconImg = get_sub_field('icon_or_image');
@@ -200,15 +202,16 @@ $section_1_content_text = get_field('section_1_content_text');
                                  <div class="<?= $columnCls; ?> col-sm-6 member fade-in-up">
                                     <img class="image" alt="<?= $memberName; ?>" src="<?= $memberImage; ?>" />
                                     <p class="name"><?= $memberName; ?></p>
-                                    <p class="position arrow"><?= $position; ?></p>
+                                    <p class="position"><?= $position; ?></p>
                     <?php
-                                if(have_rows('member_detail')){
-                    ?>
-                                         <div class="details">
-                                            <div class="detail-content">
-                                            <p class="name"><?= $memberName; ?></p>
-                                            <p class="position"><?= $position; ?></p>
-                                            <p class="member-description content-paragraph"><?= $memberDesc; ?></p>
+                                if($memberDesc || have_rows('member_detail')){
+                    ?>  
+                                    <p class="arrow"></p>
+                                    <div class="details">
+                                    <div class="detail-content">
+                                    <p class="name"><?= $memberName; ?></p>
+                                    <p class="position"><?= $position; ?></p>
+                                    <p class="member-description content-paragraph"><?= $memberDesc; ?></p>
                                     <?php
                                         if(have_rows('member_detail')){
                                     ?>
