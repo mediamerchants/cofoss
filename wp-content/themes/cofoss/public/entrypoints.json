@@ -2,10 +2,10 @@
   "app": {
     "js": [
       "js/runtime.e97f88.js",
-      "js/app.74bf92.js"
+      "js/app.9b1e54.js"
     ],
     "css": [
-      "css/app.3dbe56.css"
+      "css/app.10442e.css"
     ],
     "dependencies": [
       "jquery"
@@ -14,7 +14,7 @@
   "editor": {
     "js": [
       "js/runtime.e97f88.js",
-      "js/editor.512605.js"
+      "js/editor.6948dd.js"
     ],
     "css": [
       "css/editor.ef46db.css"
