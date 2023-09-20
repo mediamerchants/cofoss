@@ -138,30 +138,38 @@
         .member{
             margin-bottom: 40px;
             .image{
-                cursor: pointer;
                 transform: scale(1,1);
                 transition: all 0.2s linear;
                 -webkit-transition: all 0.2s linear;
-            }
-            &:hover > .image{
-                transform: scale(1.03,1.03);
-                transition: all 0.2s linear;
-                -webkit-transition: all 0.2s linear;
+
+                &:hover{
+                    transform: scale(1.03,1.03);
+                    transition: all 0.2s linear;
+                    -webkit-transition: all 0.2s linear;
+                }
             }
             .name{
                 font-size: 28px;
                 color: #4D9ECD;
                 margin-top: 30px;
-                &:hover{
-                    cursor: pointer;
-                    color: #44B063;
-                }
+                
             }
             .position{
                 font-size: 21px;
                 color: #000;
                 margin-bottom: 10px;
                 padding-bottom: 0;
+            }
+            &:has(.details) > .name{
+                &:hover{
+                    cursor: pointer;
+                    color: #44B063;
+                }
+            }
+            &:has(.details){
+                &:hover > .image{
+                    cursor: pointer;
+                }
             }
             .details{
                 display: none;
@@ -256,6 +264,18 @@
                 margin: 40px 0;
             }
         }
+        img{
+            scale: 1;
+            transition: all 0.2s linear;
+            -webkit-transition: all 0.2s linear;
+
+            &:hover{
+                scale: 1.03;
+                transition: all 0.2s linear;
+                -webkit-transition: all 0.2s linear;
+            }
+        }
+        
     }
 
     ol.terms{

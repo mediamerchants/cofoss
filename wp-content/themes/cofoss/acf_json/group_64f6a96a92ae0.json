@@ -419,6 +419,26 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6503eb1396418",
+                            "label": "Extra Class",
+                            "name": "extra_class_column_2",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_64f9012091bb1",
                             "label": "Column Content",
                             "name": "2_column_content",
@@ -533,6 +553,26 @@
                     "label": "3 Column Layout",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_6503ec90b66db",
+                            "label": "Extra Class",
+                            "name": "extra_class_column_3",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
                         {
                             "key": "field_64f6b134472cd",
                             "label": "Column Content",
@@ -1354,5 +1394,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694505267
+    "modified": 1694759021
 }
