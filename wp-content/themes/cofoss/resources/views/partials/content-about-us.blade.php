@@ -25,6 +25,21 @@ $extraClass = get_field('extra_class');
             
             while (have_rows('set_content')) : the_row();
             
+                if(get_row_layout() == 'slider'){
+                    $isActive = get_sub_field('activate_section_slider');
+                    $layout = get_sub_field('layout_display');
+                    $layout = ($layout != '' && $layout != null) ? $layout : 'fullwidth';
+                    
+                    if($isActive){
+                    ?>
+                        <div class="section-slider <?= $layout; ?>">
+                            <x-section-slider-component/>
+                        </div>
+                    <?php
+                    }
+
+                }
+            
                 if(get_row_layout() == 'section_title' || get_row_layout() == 'section_subtitle'){
                     $sectionTitle = get_sub_field('section_title');
                     $sectionSubTitle = get_sub_field('section_subtitle');
